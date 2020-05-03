@@ -5,11 +5,12 @@
 ## Write a short comment describing this function
 ## makeCacheMatrix: This function creates a special “matrix” object that can cache its inverse.
 ## I created it by adapting the makeVector() code given earlier to the purpose of inverting a matrix (
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix) {
   m <- NULL
   set <- function(y) {
     x <<- y
     m <<- NULL
+  }
   get <- function() x
   SetMatrixInverse <- function(MatrixInversion) m <<- MatrixInversion
   GetMatrixInverse <- function() m
